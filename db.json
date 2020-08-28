@@ -2,15 +2,13 @@
   "users": [
     {
       "name": "Trung Duc",
-      "id": "hpR00NHSo"
+      "phone": "012344535353",
+      "id": "dsYcYuiIb"
     },
     {
       "name": "Hong Quang",
-      "id": "kBqwfrS1f"
-    },
-    {
-      "name": "Leu leu",
-      "id": "8V1TCNVUR"
+      "phone": "012344535353",
+      "id": "xu5vZlGKU"
     }
   ]
 }
