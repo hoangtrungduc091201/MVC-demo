@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 var userRoute = require('./routes/user.route.js');
 var port = 3002;
 
+
 const app= express();
 
 app.set('view engine', 'pug');
