@@ -3,12 +3,21 @@
     {
       "name": "Trung Duc",
       "phone": "012344535353",
-      "id": "dsYcYuiIb"
+      "id": "dsYcYuiIb",
+      "email": "ducbn2001@gmail",
+      "password": "123"
     },
     {
       "name": "Hong Quang",
       "phone": "012344535353",
-      "id": "xu5vZlGKU"
+      "id": "xu5vZlGKU",
+      "email": "hello@gmail.com",
+      "password": "1234"
+    },
+    {
+      "name": "Le giang",
+      "phone": "123132131313",
+      "id": "Aps8il3F1"
     }
   ]
 }
