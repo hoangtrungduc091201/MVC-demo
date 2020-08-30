@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 
 var userRoute = require('./routes/user.route.js');
 var authRoute = require('./routes/auth.route.js');
+var productRoute = require('./routes/product.route.js');
 
 var authMiddleware = require('./middlewares/auth.middleware');
 
@@ -27,7 +28,10 @@ app.get('/', (req, res) => {
 })
 app.use('/users', authMiddleware.requireAuth, userRoute);
 app.use('/auth', authRoute);
-
+app.use('/products', productRoute);
+// lưu ý url kiểu :/products/router.get('..').
+// /products/
+// or /users/search
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
   })
