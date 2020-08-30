@@ -9,7 +9,7 @@ block content
     form( method="POST")
         .form-group
             label(for="email") Import email
-            input#email(name="email", type="text",class="form-control",value = values ? values.email : '', placeholder="Email")
+            input#email(name="email", type="email",class="form-control",value = values ? values.email : '', placeholder="Email")
         .form-group
             label(for="password") Import password
             input#password(name="password", type="password",class="form-control",value = values ? values.password : '', placeholder="Password")    
