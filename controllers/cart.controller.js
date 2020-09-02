@@ -22,3 +22,9 @@ module.exports.addToCart = (req, res, next) => {
 
     res.redirect('/products');
 }
+module.exports.viewCart = (req, res, next) => {
+
+    res.render('carts/index', {
+        carts : db.get('sessions').value()
+    });
+}

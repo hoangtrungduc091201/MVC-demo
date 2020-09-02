@@ -7,6 +7,7 @@ var userRoute = require('./routes/user.route.js');
 var authRoute = require('./routes/auth.route.js');
 var productRoute = require('./routes/product.route.js');
 var cartRoute = require('./routes/cart.route.js');
+var transferRoute = require('./routes/transfer.route.js');
 
 
 var authMiddleware = require('./middlewares/auth.middleware');
@@ -21,6 +22,7 @@ app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(cookieParser('adsadaweqweqeq'));
 app.use(sessionMiddleware);
+
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
@@ -31,7 +33,9 @@ app.get('/', (req, res) => {
 app.use('/users', authMiddleware.requireAuth, userRoute);
 app.use('/auth', authRoute);
 app.use('/products', productRoute);
-app.use('/cart', cartRoute);
+app.use('/cart', authMiddleware.requireAuth , cartRoute);
+app.use('/transfer', authMiddleware.requireAuth , transferRoute);
+
 // lưu ý url kiểu :/products/router.get('..').
 // /products/
 // or /users/search
